@@ -1,2 +1,13 @@
 [build]
   functions = "netlify/functions"
+  publish = "public"
+
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/honeypot"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/honeypot"
+  status = 200
